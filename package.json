@@ -1,0 +1,12 @@
+{
+  "name": "genesysgo-jwt-refresher",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@solana/web3.js": "^1.66.1",
+    "bs58": "^5.0.0",
+    "tweetnacl": "^1.0.3"
+  }
+}
