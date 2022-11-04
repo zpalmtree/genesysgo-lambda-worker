@@ -89,6 +89,7 @@ exports.handler = async (event) => {
             path: `/api/premium/token/${process.env.RPC_ID}`,
             headers: {
                 Authorization: `Bearer ${authenticationToken}`,
+                'Content-Type': 'application/json',
             },
             body: JSON.stringify({
                 user: signer,
@@ -104,9 +105,7 @@ exports.handler = async (event) => {
             };
         }
 
-        const parsedToken = JSON.parse(bodyStr);
-
-        console.log(parsedToken);
+        const parsedToken = JSON.parse(body);
 
         if (typeof parsedToken.token !== "string") {
             console.log("No valid jwt token returned");
